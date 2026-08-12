@@ -1,17 +1,4 @@
-<div align="center">
-
 # InsightEngine — Natural-Language SQL Analytics
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://python.org)
-[![FastAPI](https://img.shields.io/badge/FastAPI-0.110+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
-[![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15+-4169E1?logo=postgresql&logoColor=white)](https://postgresql.org)
-[![Status](https://img.shields.io/badge/Status-Production-success)](#)
-[![Accuracy](https://img.shields.io/badge/Benchmark%20Accuracy-~94%25-059669)](#results-one-production-client)
-
-</div>
-
----
 
 > A natural-language analytics layer over a multi-table SQL warehouse. Lets non-technical users ask business questions in plain English; an LLM query-planner generates parameterised, guardrailed SQL against PostgreSQL and returns charts, trend analysis, and follow-up suggestions.
 
