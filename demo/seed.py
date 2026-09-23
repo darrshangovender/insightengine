@@ -119,7 +119,7 @@ def seed(db_path: Path = DB_PATH) -> None:
     conn = sqlite3.connect(db_path)
     try:
         conn.executescript(SCHEMA_SQL)
-        now = datetime(2026, 6, 24, 12, 0, 0)
+        now = datetime(2026, 6, 24, 12, 0, 0)  # noqa: DTZ001  fixed naive clock keeps seeded demo rows reproducible
         history_start = now - timedelta(days=DAYS_OF_HISTORY)
 
         # ---- customers ---------------------------------------------------
