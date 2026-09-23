@@ -85,6 +85,4 @@ def _is_number(v: Any) -> bool:
 def _looks_like_date(col_name: str, value: Any) -> bool:
     if _DATE_NAME_RE.search(col_name):
         return True
-    if isinstance(value, str) and _ISO_DATE_RE.match(value):
-        return True
-    return False
+    return bool(isinstance(value, str) and _ISO_DATE_RE.match(value))
