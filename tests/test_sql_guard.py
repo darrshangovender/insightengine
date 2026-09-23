@@ -12,7 +12,6 @@ import pytest
 
 from api.guard.sql_guard import GuardError, SqlGuard, guard_sql
 
-
 # ---------------------------------------------------------------------------
 # Well-formed SELECT queries — should pass and be returned with a LIMIT.
 # ---------------------------------------------------------------------------
