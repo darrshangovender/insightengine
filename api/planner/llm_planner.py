@@ -17,7 +17,7 @@ import os
 import re
 from dataclasses import dataclass
 
-from api.planner.schema_retriever import SchemaRetriever, TableSchema
+from api.planner.schema_retriever import SchemaRetriever
 
 SYSTEM_PROMPT = """\
 You are a SQL analyst. Given a database schema and a natural-language question,
