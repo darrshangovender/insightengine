@@ -93,7 +93,7 @@ def evaluate_question(
     except GuardError as e:
         elapsed = (time.perf_counter() - start) * 1000.0
         return EvalResult(qid, question, "", False, f"guard rejected: {e}", elapsed)
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001  eval harness records the failure instead of aborting the run
         elapsed = (time.perf_counter() - start) * 1000.0
         return EvalResult(qid, question, "", False, f"planner error: {e}", elapsed)
 
@@ -108,7 +108,7 @@ def evaluate_question(
     except QueryTimeoutError as e:
         elapsed = (time.perf_counter() - start) * 1000.0
         return EvalResult(qid, question, safe_sql, False, f"timeout: {e}", elapsed)
-    except Exception as e:
+    except Exception as e:  # noqa: BLE001  eval harness records the failure instead of aborting the run
         elapsed = (time.perf_counter() - start) * 1000.0
         return EvalResult(qid, question, safe_sql, False, f"exec error: {e}", elapsed)
 
